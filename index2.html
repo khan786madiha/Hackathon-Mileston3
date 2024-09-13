@@ -1,111 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-        <h1> Dynamic Resume Builder with Form</h1>
+    <h1>Dynamic resum Builder</h1>
+    <form id="resum-form">
+        <fieldset>
+            <legend>personal information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="enter your name" required>
 
-        <form id="resumform">
+            <label for="email">Email</label>
+            <input type="email" id="name" placeholder="enter your email" required>
 
-            
-            <label id="pic" for="profile_picture">Profile Picture:</label>
-            <input type="file" id="profile_picture" name="profile_picture" accept="image/*"><br><br>
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" placeholder="enter your phone number" required>
+        </fieldset>
 
-            <fieldset>
-                <legend>Personal Details</legend>
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education" rows="4"required></textarea>
+        </fieldset>
 
+        
+        <fieldset>
+            <legend>Experiance</legend>
+            <label for="experiance">Experiance:</label>
+            <textarea id="experiance" placeholder="Enter your experiance" rows="4"required></textarea>
+        </fieldset>
 
-                <label for="name">your name:</label>
+        
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="Enter your skills" rows="4"required></textarea>
+        </fieldset>
+        <button type="submit"><b>Generate resume</b></button>
+    </form>
+    <br>
 
-                <input type="text" id="name" name="name"><br>
-
-                <label for="email_input">Email :</label>
-                <input type="email" id="email_input" name="email_input"><br>
-
-                <!-- <label for="password_input">Password :</label>
-    <input type="password" id="password_input" name="password_input"><br><br> -->
-
-                <label for="number_input"> Phone Number:</label>
-                <input type="number" id="number_input" name="number_input"><br><br>
-
-                <label for="date_input">Date of birth:</label>
-                <input type="date" id="date_input" name="date_input"><br><br>
-
-
-                <label for="radio_input1">male:</label>
-                <input type="radio" id="radio_input1" name="radio_group"><br><br>
-
-                <label for="radio_input2">female:</label>
-                <input type="radio" id="radio_input2" name="radio_group"><br><br>
-
-                
-         <label for="select_input">relion:</label>
-            <select id="select_input" name="select_input">
-                <option value="option1">muslim</option>
-                <option value="option2">non muslim</option>
-            </select><br><br>
-            </fieldset>
-
-
-
-            <!-- <label for="checkbox_input">Checkbox Input:</label>
-    <input type="checkbox" id="checkbox_input" name="checkbox_input"><br><br> -->
-
-            <fieldset>
-                <legend>Education</legend>
-                <label for="education">Education:</label><br>
-                <textarea id=">education" name=">education" rows="4" cols="50"></textarea><br><br>
-            </fieldset>
-
-
-            <fieldset>
-                <legend>Experience</legend>
-                <label for="experience">Experience:</label><br>
-                <textarea id="experience" name=">experience" rows="4" cols="50"></textarea><br><br>
-            </fieldset>
-
-
-            <fieldset>
-                <legend>Skills</legend>
-                <label for="skills">Skills:</label><br>
-                <textarea id="skills" name="skills" rows="4" cols="50"></textarea><br><br>
-            </fieldset>
-
-
-         
-
-            <label for="file_input">File :</label>
-            <input type="file" id="file_input" name="file_input"><br><br> -->
-
-            <!-- <label for="color_input">Favorite Color:</label>
-    <input type="color" id="color_input" name="color_input"><br><br> -->
-
-            <!-- <label for="range_input">Range Input:</label>
-    <input type="range" id="range_input" name="range_input" min="0" max="10"><br><br> -->
-
-            <!-- <label for="search_input">Search Input:</label>
-    <input type="search" id="search_input" name="search_input"><br><br> -->
-<!-- 
-            <label for="tel_input">Telephone Number:</label>
-            <input type="tel" id="tel_input" name="tel_input"><br><br>
-
-            <label for="url_input">URL Input:</label>
-            <input type="url" id="url_input" name="url_input"><br><br>
- -->
-
-            <button type="submit">Submit</button> 
-        </form>
-    
-        <!-- genrate -->
-        <div id="resumeOutput"></div>
-
-        <script src="script.js"></script>
+    <div id="resume-display"></div>
+    <script src="script.js"></script>
 </body>
-
 </html>
